@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function demo() {
+      var output = "";
+
+      loop1:
+      for (j = 1; j < 10; j++) {
+        var i = 0, n = 20;
+        loop2:
+        while (i <= n) {
+
+          i++;
+
+          if (i == 3) {
+            continue;
+          }
+
+          if (i == 5) {
+            break;
+          }
+
+          if (j == 3) {
+            break loop1;
+          }
+          output += "The value of j is " + j + " and i is " + i + "<br>";
+        }
+      }
+      document.getElementById("result").innerHTML = output;
+    }
+  </script>
+</head>
+
+<body>
+
+  <button type="button" onclick="demo()">Demo</button>
+  <p id="result"></p>
+</body>
+
+</html>
